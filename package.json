@@ -2,13 +2,14 @@
   "name": "graphbook",
   "version": "0.0.1",
   "description": "GraphQL, Express, and React app",
+  "repository": "https://github.com/Aleksandandar-Nedelkovski/graphQLbook",
   "main": "index.js",
   "scripts": {
     "client": "webpack-dev-server --devtool inline-source-map --hot --config webpack.client.config.js",
     "client:build": "webpack --config webpack.client.build.config.js",
     "stats": "webpack --profile --json --config webpack.client.build.config.js > stats.json",
     "analyze": "webpack-bundle-analyzer stats.json",
-    "server": "nodemon --exec babel-node --watch src/server src/server/index.js",
+    "start": "nodemon --exec babel-node --watch src/server src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aleksandar Nedelkovski",
@@ -21,10 +22,13 @@
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6",
     "helmet": "^3.21.2",
+    "mysql2": "^2.0.1",
     "nodemon": "^2.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "sequelize": "^5.21.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

@@ -3,7 +3,7 @@ import path from "path";
 import helmet from "helmet";
 import cors from "cors";
 import compress from "compression";
-import services from './services'
+import services from './services/services'
 
 const app = express();
 const serviceNames = Object.keys(services);

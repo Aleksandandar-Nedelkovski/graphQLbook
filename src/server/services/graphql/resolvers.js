@@ -1,3 +1,5 @@
+import logger from '../../helpers/logger';
+
 const posts = [{
   id: 2,
   text: "Lorem ipsum",
@@ -24,6 +26,7 @@ const resolvers = {
 
   RootMutation: {
     addPost(root, { post, user }, context) {
+      logger.log({ level: 'info', message: 'Post was created' });
       const postObject = {
         ...post,
         user,
@@ -34,7 +37,7 @@ const resolvers = {
     }
   },
 
-  
+
 };
 
 export default resolvers;
