@@ -1,11 +1,13 @@
-import Sequelize from "sequelize";
-import configFile from "../config/config";;
+import Sequelize from 'sequelize';
+import configFile from '../config/';
 
-const env = process.env.NODE_ENV || "development";
+const env = process.env.NODE_ENV || 'development';
 const config = configFile[env];
 
-const sequelize = new Sequelize(config.database, config.username, config.password)
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-const db = { sequelize };
+const db = {
+  sequelize,
+};
 
 export default db;

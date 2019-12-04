@@ -1,7 +1,7 @@
 {
   "name": "graphbook",
   "version": "0.0.1",
-  "description": "GraphQL, Express, and React app",
+  "description": "GraphQL, Express, MySQL, and React tech stack",
   "repository": "https://github.com/Aleksandandar-Nedelkovski/graphQLbook",
   "main": "index.js",
   "scripts": {
