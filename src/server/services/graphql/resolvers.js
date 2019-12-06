@@ -17,27 +17,27 @@ const posts = [{
   }
 }];
 
-const resolvers = {
-  RootQuery: {
-    posts(root, args, context) {
-      return posts;
+export default function resolver() {
+  const resolvers = {
+    RootQuery: {
+      posts(root, args, context) {
+        return posts;
+      },
     },
-  },
 
-  RootMutation: {
-    addPost(root, { post, user }, context) {
-      logger.log({ level: 'info', message: 'Post was created' });
-      const postObject = {
-        ...post,
-        user,
-        id: posts.length + 1,
-      };
-      posts.push(postObject);
-      return postObject;
+    RootMutation: {
+      addPost(root, { post, user }, context) {
+        logger.log({ level: 'info', message: 'Post was created' });
+        const postObject = {
+          ...post,
+          user,
+          id: posts.length + 1,
+        };
+        posts.push(postObject);
+        return postObject;
+      }
     }
-  },
-
-
-};
-
+  };
+  return resolvers;
+}
 export default resolvers;
