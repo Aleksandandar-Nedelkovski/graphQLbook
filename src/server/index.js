@@ -6,7 +6,7 @@ import compress from 'compression';
 import db from './database';
 
 const utils = { db };
-const services = servicesLoader(utils);
+// const services = servicesLoader(utils);
 const root = path.join(__dirname, '../../');
 const app = express();
 
