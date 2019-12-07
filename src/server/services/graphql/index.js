@@ -17,5 +17,3 @@ export default (utils) => {
 
   return server;
 };
-
-export default server;
