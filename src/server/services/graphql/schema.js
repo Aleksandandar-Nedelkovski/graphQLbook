@@ -1,13 +1,27 @@
 const typeDefinitions = `
+  type User {
+    id: Int
+    avatar: String
+    username: String
+  }
+  
   type Post {
     id: Int
     text: String
     user: User
   }
 
-  type User {
-    avatar: String
-    username: String
+  type Message {
+    id: Int
+    text: String
+    chat: Chat
+    user: User
+  }
+  
+  type Chat {
+    id: Int
+    messages: [Message]
+    users: [User]
   }
 
   input PostInput {
@@ -28,6 +42,7 @@ const typeDefinitions = `
 
   type RootQuery {
     posts: [Post]
+    chats: [Chat]
   }
 
   schema {

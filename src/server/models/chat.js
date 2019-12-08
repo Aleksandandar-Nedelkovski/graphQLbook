@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING
   }, {});
   Chat.associate = function(models) {
-    // associations can be defined here
+    Chat.hasMany(models.Message)
   };
   return Chat;
 };
